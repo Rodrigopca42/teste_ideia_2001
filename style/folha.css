@@ -6,12 +6,20 @@
     --cor0:#f08910;
     --cor1:#f1f1f1;
     --cor2:#ffffff;
-    --cor3:#303030;
+    --cor3:#686767;
     --cor4:#ececec;
     --cor5:#fefefe;
+    --cor6:#111111;
     --fonte0: Arial, Helvetica, sans-serif;
     --fonte1: 'Open Sans', sans-serif;
+}
 
+*,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 *{
@@ -20,42 +28,80 @@
 }
 body{
     background-color: var(--cor1);
-    font-family: var(--fonte0);
-   
+    font-family: var(--fonte0);   
 }
 
+header{
+    width: 90%;
+    height: 20vh;
+    display: flex;
+    margin: auto;
+
+}
+
+
+/* LOGTIPO QRIDEIA*/
 .logo{
-    width: 215px;
+    width: 17%;
+    height: 6vh;
+    max-width: 215px;
     position: relative;
-    top: 58px;
-    left: 195px;
+    top: 6vh;
+    left: 8%;
 }
+/* MENU*/
 nav{
-    width: 450px;
+    height: 6vh;
+    width: 27vw;
+    min-width: 250px;
+    display: flex;
     position: relative;
-    top: 21px;
-    left: 500px;
+    top: 6vh;
+    left: 14%;
+    align-items: center;
+    justify-content: space-around;
+    transition: 0.6s;
 }
 
-nav > a{
+a{
+    position: relative;
     text-decoration: none;
     font-family: var(--fonte1);
+    font-size: 15px;
     color: var(--cor3);
-    padding: 13px;
+    letter-spacing: 0.5px;
+    padding: 0 13px;
+    transition: 0.5s;
+
 }
 
-nav > a:hover{
-    text-decoration: underline;
-    font-size: larger;
-    color-adjust: var(--cor0);  
+a:after{
+    content: "";
+    position:absolute;
+    background-color: var(--cor0);
+    height: 2px;
+    width: 0;
+    left: 15px;
+    bottom: -10px;
+    transition: 0.4s;
 }
 
+a:hover{
+    color: var(--cor6);
+    font-size: large;
+}
+
+a:hover:after{
+    width: 70%;
+}
+/*USUÁRIO */
 .user{
-    width: 150px;
-    height: 77px;
+    width: 12%;
+    max-width: 150px;
     position: relative;
-    top: -65px;
-    left: 1018px;
+    top: -5vh;
+    left: 29%;
+
 }
 .user > h3{
     font-family:  var(--fonte1);
@@ -63,47 +109,70 @@ nav > a:hover{
 .user > h4{
     padding-left: 32px;
     color: var(--cor0);
-    text-decoration: underline;
     font-family: var(--fonte1);
-
+    transition: 0.5s;
 }
+
+.user > h4:hover{
+    font-size: large;
+    text-decoration: underline;
+}
+
 .user >.img_user{
     position: relative;
     top: 54px;
     left: -52px;
 }
-
+/*FAIXA LARANJA*/
 .laranja{
-    height: 125px;
+    width: 100%;
+    height: 25vh;
     background-color: var(--cor0) ;
 }
-
+/*CONTAINER ONDE O USUÁRIO PODE FAZER SUAS ESCOLHAS*/
 section{
-    width: 950px;
-    height: 480px;
+    width: 90%;
+    max-width: 950px;
+    height: 100vh;
     background-color: var(--cor2);
-    margin: auto; 
+    margin: auto;
     margin-top: -65px;
     margin-bottom: 70px;
     clear: left;
 }
-
+/*MENSAGEM AO USUÁRIO*/
 .texto{
     text-align: center;
     padding: 50px;
 
 }
-
+/*OPÇÕES DO USUÁRIO*/
 .box_escolha{
-    width: 250px;
-    height: 200px;
+    width: 90%;
+    max-width: 250px;
+    height: 36vh;
     background-image: linear-gradient(to top, var(--cor4), var(--cor5));
     border-radius: 10px;
     float: left;
-    margin-left: 50px;
+    margin: 0 3% 0 3.5%;
+    transition: 0.5s;
+}
+.box_escolha1{
+    width: 90%;
+    max-width: 250px;
+    height: 36vh;
+    background-image: linear-gradient(to top, var(--cor4), var(--cor5));
+    border-radius: 10px;
+    float: left;
+    margin: 0 3% 0 4%;
+    transition: 0.5s;
 }
 
 .box_escolha > h4{
+    text-align: center;
+    margin-top: 54px;
+}
+.box_escolha1 > h4{
     text-align: center;
     margin-top: 54px;
 }
@@ -112,4 +181,95 @@ section{
     position: relative;
     left: 80px;
     top: 22px;
+}
+.box_escolha1 > .img_box{
+    position: relative;
+    left: 71px;
+    top: 30px;
+}
+
+.box_escolha:hover{
+    width: 253px;
+    height: 203px;
+}
+.box_escolha1:hover{
+    width: 253px;
+    height: 203px;
+}
+
+/*RODAPÉ*/
+footer{
+    background-color:var(--cor6) ;
+    text-align: center;
+    max-height: 60px;
+    width: 100%;
+}
+.rodape{
+    padding: 10px 0 10px 0;
+    color: var(--cor3);
+}
+
+.ideia{
+    color: var(--cor0);
+}
+@media(max-width: 700px){
+    header{
+        height: 25vh;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        top: -1vh;
+        left: 0%;
+    }
+
+    .logo{
+        width: 34%;
+        position: relative;
+        top: 3vh;
+        left: 10%;
+    }
+
+    nav{
+        height: 6vh;
+        width: 27vw;
+        min-width: 250px;
+        display: flex;
+        position: relative;
+        top: 4vh;
+        left: 15%;
+        align-items: center;
+        justify-content: space-around;
+        transition: 0.6s;
+    }
+
+    .user{
+        width: 50%;
+        max-width: 150px;
+        position: relative;
+        top: -1vh;
+        left: 22%;
+    }
+
+    section{
+        width: 90%;
+        max-width: 950px;
+        height: 1203px;
+        margin: auto;
+        margin-top: -65px;
+        margin-bottom: 70px;
+        clear: left;
+    }
+
+    .box_escolha1{
+        margin: auto;
+        position: relative;
+        left: 14%;
+    }
+
+    .box_escolha{
+        margin: auto;
+        position: relative;
+        left: 14%;
+    }
+    
 }

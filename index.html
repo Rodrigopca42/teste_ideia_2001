@@ -9,38 +9,44 @@
     <link rel="stylesheet" href="style/folha.css">
 </head>
 <body>
-    <header>
-        <img class="logo"  src="imagem/logo.png" alt="logotipo QR IDEIA">
-    </header>
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">Eventos</a>
-        <a href="#">Usuários</a>
-        <a href="#">Relatórios</a>
-    </nav>
-    <div class="user">
-        <img class="img_user" src="imagem/user.png" alt="Ícone User">
-        <h3>Igor Gonçalves</h3>
-        <h4>Desconectar</h4>
-    </div>
+   
+        <header>
+            <img class="logo"  src="imagem/logo.png" alt="logotipo QR IDEIA">
+                
+                <nav>
+            <a href="#">Home</a>
+            <a href="#">Eventos</a>
+            <a href="#">Usuários</a>
+            <a href="#">Relatórios</a>
+                </nav>
+                <div class="user">
+            <img class="img_user" src="imagem/user.png" alt="Ícone User">
+            <h3>Igor Gonçalves</h3>
+            <h4>Desconectar</h4>
+                </div>
+        </header>
     <div class="laranja"></div>
     <section>
         <div class="texto">
             <p>Olá <strong>Igor Gonçalves,</strong> selecilone uma das opções abaixo:</p>
         </div>
-        <div class="box_escolha">
-            <img class="img_box" src="imagem/icone-eventos.png" alt="Icone Eventos">
-            <h4>Meus Eventos</h4>
+        <div id="eve" class="box_escolha1" onclick="envento()" >
+            <img  class="img_box" src="imagem/icone-eventos.png" alt="Icone Eventos">
+            <h4><a href="">Meus Eventos</a></h4>
         </div>
-        <div class="box_escolha">
+        <div id="usu" class="box_escolha">
             <img class="img_box" src="imagem/icone-usuarios.png" alt="Icone Usuários">
-            <h4>Usuários</h4>
+            <h4><a href="">Usuários</a></h4>
         </div>
-        <div class="box_escolha">
+        <div id="rel" class="box_escolha">
             <img class="img_box" src="imagem/icone-relatorios.png" alt="Icone Relatórios">
-            <h4>Relatórios</h4>
+            <h4><a href="">Relatórios</a></h4>
         </div>
+        <div id="res"></div>
     </section>
-
+    <footer>
+        <p class="rodape"><span class="ideia">Ideia 2001</span> &copy; Copyright 2019 - Todos os direitos reservados</p>
+    </footer>
+    <script src="js/folha.js"></script>
 </body>
 </html>
