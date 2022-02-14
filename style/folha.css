@@ -94,7 +94,7 @@ a:hover{
 a:hover:after{
     width: 70%;
 }
-/*USUÁRIO */
+/* CONFIGURAÇÃO DA ENTRADA DE USUÁRIO DENTRO DO HEADER */
 .user{
     width: 12%;
     max-width: 150px;
@@ -129,7 +129,22 @@ a:hover:after{
     height: 25vh;
     background-color: var(--cor0) ;
 }
-/*CONTAINER ONDE O USUÁRIO PODE FAZER SUAS ESCOLHAS*/
+
+main{
+    margin: auto;
+    width: 19%;
+    position: relative;
+    top: -1vh;
+}
+
+main h1{
+    font-family: var(--fonte1);
+    color: var(--cor4);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.438);
+    font-size: 4em;
+}
+
+/*CONTAINER ONDE O USUÁRIO PODE FAZER SUAS ESCOLHAS NA PÁGINA HOME*/
 section{
     width: 90%;
     max-width: 950px;
@@ -140,13 +155,13 @@ section{
     margin-bottom: 70px;
     clear: left;
 }
-/*MENSAGEM AO USUÁRIO*/
+/*MENSAGEM AO USUÁRIO NA PÁGINA HOME*/
 .texto{
     text-align: center;
     padding: 50px;
 
 }
-/*OPÇÕES DO USUÁRIO*/
+/*OPÇÕES DO USUÁRIO NA HOME*/
 .box_escolha{
     width: 90%;
     max-width: 250px;
@@ -196,6 +211,91 @@ section{
     width: 253px;
     height: 203px;
 }
+/* PÁGINA DE EVENTOS - CARROSSEL DE IMAGENS*/
+.container{
+    width: 90%;
+    max-width: 950px;
+    height: 100vh;
+    background-color: var(--cor2);
+    margin: auto;
+    margin-top: -65px;
+    margin-bottom: 70px;
+    clear: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.carrossel{
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.568);
+    overflow: hidden;
+    max-height: 338px;
+    width: 52%;
+    position: relative;
+}
+
+.feira{
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(0);   
+}
+
+.img_car{
+    object-fit: cover;
+    max-height: 338px;
+    width: 100%;
+}
+
+/*TABELA NA PÁGINA USUÁRIOS*/
+.tabela{
+    width: 90%;
+    max-width: 950px;
+    height: 100vh;
+    background-color: var(--cor2);
+    margin: auto;
+    margin-top: -65px;
+    margin-bottom: 70px;
+    clear: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.cab, th, td{
+    padding: 2% 6%;
+    width: 20%;
+    height: 5vh;
+}
+
+.tbl{
+    margin: 5%;
+}
+
+.dados{
+    background-color:var(--cor3);
+    color: var(--cor4);
+    transition: 0.5s;
+}
+.dados1{
+    background-color: var(--cor4);
+    color: var(--cor3);
+    transition: 0.5s;
+}
+
+th{
+    background-color: var(--cor0);
+    color: var(--cor3);
+}
+
+.dados1:hover{
+    font-size: large;
+}
+
+.dados:hover{
+    font-size: large;
+}
 
 /*RODAPÉ*/
 footer{
@@ -212,6 +312,8 @@ footer{
 .ideia{
     color: var(--cor0);
 }
+
+/*RESPONSIVIDADE*/
 @media(max-width: 700px){
     header{
         height: 25vh;
@@ -270,6 +372,40 @@ footer{
         margin: auto;
         position: relative;
         left: 14%;
+    }main{
+        margin: auto;
+        width: 70%;
+        position: relative;
+        top: -1vh;
+    };
+    .carrossel{
+        height: 80vh;
+        width: 80%;
     }
-    
+
+    .tabela{
+        width: 90%;
+        max-width: 950px;
+        height: 300px;
+        margin: auto;
+        margin-top: -65px;
+        margin-bottom: 50px;
+    }
+
+    .dados{
+        width: 35%;
+        font-size: 12px;
+        text-align: center;
+    }
+    .dados1{
+        width: 35%;
+        font-size: 12px;
+        text-align: center;
+    }
+    th{
+        width: 35%;
+        text-align: center;
+        font-size: 12px;
+    }
+
 }

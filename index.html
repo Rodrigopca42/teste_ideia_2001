@@ -14,10 +14,10 @@
             <img class="logo"  src="imagem/logo.png" alt="logotipo QR IDEIA">
                 
                 <nav>
-            <a href="#">Home</a>
-            <a href="#">Eventos</a>
-            <a href="#">Usuários</a>
-            <a href="#">Relatórios</a>
+            <a href="#home">Home</a>
+            <a href="páginas/eventos.html" target="_self" rel="next">Eventos</a>
+            <a href="páginas/usuários.html" target="_self" rel="next">Usuários</a>
+            <a href="páginas/relatórios.html" target="_self" rel="next">Relatórios</a>
                 </nav>
                 <div class="user">
             <img class="img_user" src="imagem/user.png" alt="Ícone User">
@@ -30,23 +30,21 @@
         <div class="texto">
             <p>Olá <strong>Igor Gonçalves,</strong> selecilone uma das opções abaixo:</p>
         </div>
-        <div id="eve" class="box_escolha1" onclick="envento()" >
+        <div class="box_escolha1" onclick="envento()" >
             <img  class="img_box" src="imagem/icone-eventos.png" alt="Icone Eventos">
-            <h4><a href="">Meus Eventos</a></h4>
+            <h4><a href="páginas/eventos.html" target="_self" rel="next">Meus Eventos</a></h4>
         </div>
-        <div id="usu" class="box_escolha">
+        <div class="box_escolha" onclick="envento()">
             <img class="img_box" src="imagem/icone-usuarios.png" alt="Icone Usuários">
-            <h4><a href="">Usuários</a></h4>
+            <h4><a href="páginas/usuários.html" target="_self" rel="next">Usuários</a></h4>
         </div>
-        <div id="rel" class="box_escolha">
+        <div class="box_escolha" onclick="envento()">
             <img class="img_box" src="imagem/icone-relatorios.png" alt="Icone Relatórios">
-            <h4><a href="">Relatórios</a></h4>
+            <h4><a href="páginas/relatórios.html" target="_self" rel="next">Relatórios</a></h4>
         </div>
-        <div id="res"></div>
     </section>
     <footer>
         <p class="rodape"><span class="ideia">Ideia 2001</span> &copy; Copyright 2019 - Todos os direitos reservados</p>
     </footer>
-    <script src="js/folha.js"></script>
 </body>
 </html>
